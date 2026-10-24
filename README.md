@@ -1,3 +1,8 @@
+<img src=".github/rdf-array-logo.png" alt="[json-ld-streaming]" width="96" align="right">
+
+# json-ld-streaming-array: json-ld-streaming for rdf-array
+
+**rdf-array** fork of [json-ld-streaming](https://github.com/w3c/json-ld-streaming): the JSON-LD streaming toRdf suite with its expectations rewritten for rdf-array: a JSON-LD `@list` is one sequence term, so the expected N-Quads have `( … )` where they had `rdf:first`/`rdf:rest` ladders. Branch `rdf-sequences`, published at <https://rdf-array.github.io/json-ld-streaming-array/>; what changed and how it was checked is in [doc/rdf-array.md](doc/rdf-array.md). Part of the [rdf-array](https://github.com/rdf-array/rdf-array) organisation.
 
 ![W3C Logo](https://www.w3.org/Icons/w3c_home)
 

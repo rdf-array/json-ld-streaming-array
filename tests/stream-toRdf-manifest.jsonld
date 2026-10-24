@@ -95,6 +95,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Creation of an empty list",
       "purpose": "Tests that @list: [] generates an empty list.",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/0013-in.jsonld",
       "expect": "stream-toRdf/0013-out.nq"
     }, {
@@ -102,6 +103,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Creation of a list with single element",
       "purpose": "Tests that @list generates a list.",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/0014-in.jsonld",
       "expect": "stream-toRdf/0014-out.nq"
     }, {
@@ -109,6 +111,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Creation of a list with multiple elements",
       "purpose": "Tests that list with multiple elements.",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/0015-in.jsonld",
       "expect": "stream-toRdf/0015-out.nq"
     }, {
@@ -172,6 +175,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Test list coercion with single element",
       "purpose": "Tests that an array with a single element on a property with @list coercion creates an RDF Collection.",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/0025-in.jsonld",
       "expect": "stream-toRdf/0025-out.nq"
     }, {
@@ -249,6 +253,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Use nodeMapGeneration bnode labels",
       "purpose": "The toRDF algorithm does not relabel blank nodes; it reuses the counter from the nodeMapGeneration to generate new ones",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/0036-in.jsonld",
       "expect": "stream-toRdf/0036-out.nq"
     }, {
@@ -697,6 +702,7 @@
       "@type": [ "jld:PositiveEvaluationTest", "jld:ToRDFTest" ],
       "name": "expand list values with @direction",
       "purpose": "List values where the term has @direction are used in expansion.",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/di03-in.jsonld",
       "expect": "stream-toRdf/di03-out.nq"
@@ -802,6 +808,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "optimize @set, keep empty arrays",
       "purpose": "RDF version of expand-0004",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/e004-in.jsonld",
       "expect": "stream-toRdf/e004-out.nq"
     }, {
@@ -880,6 +887,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "collapse set of sets, keep empty lists",
       "purpose": "RDF version of expand-0015",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/e015-in.jsonld",
       "expect": "stream-toRdf/e015-out.nq"
     }, {
@@ -887,6 +895,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "context reset",
       "purpose": "RDF version of expand-0016",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/e016-in.jsonld",
       "expect": "stream-toRdf/e016-out.nq"
     }, {
@@ -936,6 +945,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Lists and sets of properties with list/set coercion",
       "purpose": "RDF version of expand-0023",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/e023-in.jsonld",
       "expect": "stream-toRdf/e023-out.nq"
     }, {
@@ -965,6 +975,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Keep duplicate values in @list and @set",
       "purpose": "RDF version of expand-0027",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/e027-in.jsonld",
       "expect": "stream-toRdf/e027-out.nq"
     }, {
@@ -979,6 +990,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Relative IRIs",
       "purpose": "RDF version of expand-0029",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/e029-in.jsonld",
       "expect": "stream-toRdf/e029-out.nq"
     }, {
@@ -1211,6 +1223,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "Various relative IRIs with with @base",
       "purpose": "RDF version of expand-0062",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/e062-in.jsonld",
       "expect": "stream-toRdf/e062-out.nq"
     }, {
@@ -2459,6 +2472,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "@list containing @list",
       "purpose": "List of lists.",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/li01-in.jsonld",
       "expect": "stream-toRdf/li01-out.nq",
       "option": {"specVersion": "json-ld-1.1"}
@@ -2467,6 +2481,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "@list containing empty @list",
       "purpose": "List of lists.",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "input": "stream-toRdf/li02-in.jsonld",
       "expect": "stream-toRdf/li02-out.nq",
       "option": {"specVersion": "json-ld-1.1"}
@@ -2475,6 +2490,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "@list containing @list (with coercion)",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li03-in.jsonld",
       "expect": "stream-toRdf/li03-out.nq"
@@ -2483,6 +2499,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "@list containing empty @list (with coercion)",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li04-in.jsonld",
       "expect": "stream-toRdf/li04-out.nq"
@@ -2491,6 +2508,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "coerced @list containing an array",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li05-in.jsonld",
       "expect": "stream-toRdf/li05-out.nq"
@@ -2499,6 +2517,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "coerced @list containing an empty array",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li06-in.jsonld",
       "expect": "stream-toRdf/li06-out.nq"
@@ -2507,6 +2526,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "coerced @list containing deep arrays",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li07-in.jsonld",
       "expect": "stream-toRdf/li07-out.nq"
@@ -2515,6 +2535,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "coerced @list containing deep empty arrays",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li08-in.jsonld",
       "expect": "stream-toRdf/li08-out.nq"
@@ -2523,6 +2544,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "coerced @list containing multiple lists",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li09-in.jsonld",
       "expect": "stream-toRdf/li09-out.nq"
@@ -2531,6 +2553,7 @@
       "@type": ["jld:PositiveEvaluationTest", "jld:ToRDFTest", "jld:StreamTest"],
       "name": "coerced @list containing mixed list values",
       "purpose": "List of lists",
+      "rdfArrayNote": "rdf-array: a JSON-LD @list is one sequence term; the expected N-Quads have ( ... ) where they had an rdf:first/rdf:rest ladder",
       "option": {"specVersion": "json-ld-1.1"},
       "input": "stream-toRdf/li10-in.jsonld",
       "expect": "stream-toRdf/li10-out.nq"
